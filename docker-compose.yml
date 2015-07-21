@@ -1,0 +1,15 @@
+nginx:
+  image: nginx
+  ports:
+    - '8088:8088'
+  volumes:
+    - ./infra/nginx.conf.d:/etc/nginx/conf.d/
+  links:
+    - app
+app:
+  image: node:0.10
+  expose:
+    - 8000
+  volumes:
+    - ./infra/app/:/usr/src/app
+  command: 'node /usr/src/app/index.js'
