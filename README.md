@@ -24,15 +24,16 @@ to your logging facility. NGINX is configured as to avoid
 DDoS and probably some attacks by voluntarily limiting the
 number of requests and connections to the service.
 
-## Requirements
+## How to run the code
 
 ### Demo Infra 
 
 You will need `docker-compose` to run the demo infra.
 
-Simply go to the folder `infra` and type :
+Just type :
 
 ```
+$ cd infra
 $ docker-compose up
 ```
 
@@ -46,7 +47,8 @@ The frontend app is already built.
 Simply run
 
 ```
-python -m SimpleHTTPServer 8000
+$ cd demo
+$ python -m SimpleHTTPServer 8000
 ```
 
 and go to `http://localhost:8000` with your browser.
