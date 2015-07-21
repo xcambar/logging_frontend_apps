@@ -3,7 +3,7 @@ nginx:
   ports:
     - '8088:8088'
   volumes:
-    - ./infra/nginx.conf.d:/etc/nginx/conf.d/
+    - ./nginx.conf.d:/etc/nginx/conf.d/
   links:
     - app
 app:
@@ -11,5 +11,5 @@ app:
   expose:
     - 8000
   volumes:
-    - ./infra/app/:/usr/src/app
+    - ./app/:/usr/src/app
   command: 'node /usr/src/app/index.js'
